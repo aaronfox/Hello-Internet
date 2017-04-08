@@ -1,5 +1,4 @@
 # HelloInternet
-A web app devoted to making CGP Grey and Brady Haran's Hello Internet experience a good time
+A web app devoted to making CGP Grey and Brady Haran's *Hello Internet* experience a good time
 ##Test
 TESTING Things
-
