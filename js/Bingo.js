@@ -9,3 +9,14 @@ var BingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone bef
 "\"Infuriating\"", "\"Pleasing\"", "\"Experience\"", "\"Vastly\"", "Grey feigning interest and Brady pretending it's genuine",
 "Grey says \"non-zero\"", "Mispronunciation of [Derp] from [Verkastablium]", "Has Grey made a video", "\"Due to, in no small part...\"",
 "Humblebrag", "Brady says \"there's something magical\"", "Grey says \"why Brady?\""];
+
+var bingoTable = document.getElementsByClassName("bingo-table");
+
+var row = table.insertRow(0);
+var cell1 = row.insertCell(1);
+cell1.innerHTML("TEST");
+
+
+$(document).ready(function(){
+    $(".test").html("<strong>TEST</strong>");
+});
