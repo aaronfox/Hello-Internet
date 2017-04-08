@@ -18,5 +18,6 @@ cell1.innerHTML("TEST");
 
 
 $(document).ready(function(){
-    $(".test").html("<strong>TEST</strong>");
+    $(".bingo-table").html("<strong>TEST</strong>");
+    $(".test").html("<h1>TEST</h1>");
 });
