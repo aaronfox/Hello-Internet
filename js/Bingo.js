@@ -45,9 +45,11 @@ function generateTable(size) {
 }
 
 $(document).ready(function(){
-    /*$(".bingo-table").append("<tr>ROW ONE");
-    $(".bingo-table").append("<td>cell one</td>");
-    $(".bingo-table").append("<td>cell two</td>");
-    $(".bingo-table").append("<td>cell three</td></tr>");*/
-    generateTable(3);
+    generateTable(5);
+    //$(".bingo-table").find(".flex-row").on("click", function() {
+    //    alert("You clicked row " + ($(this).index()+1));
+    //});
+    $(".bingo-table").on("click", function() {
+       alert($(this).index); 
+    });
 });
