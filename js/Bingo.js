@@ -12,15 +12,35 @@ var bingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone bef
 
 //var bingoTable = document.getElementsByClassName("bingo-table");
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  var randomIndex = 0;
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 function generateTable(size) {
+    var shuffledArray = shuffle(bingoArray);
     var index = 0;
     for (var i = 0; i < size; i++) {
-        $(".bingo-table").append("<tr>row-" + i)
+        $(".bingo-table").append("<div class=\"flex-row\"")
         for (var j = 0; j < size; j++) {
-            $(".bingo-table").append("<td id=\"" + index + "\">" + bingoArray[index] + "</td>");
+            $(".bingo-table").append("<div class=\"flex-column\" id=\"column-" + index + "\">" + shuffledArray[index] + "</div>");
             index++;
         }
-        $(".bingo-table").append("</tr>")
+        $(".bingo-table").append("</div>")
     }
 }
 
