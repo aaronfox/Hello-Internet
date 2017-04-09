@@ -47,12 +47,9 @@ function generateTable(size) {
 $(document).ready(function(){
     generateTable(5);
         console.log('You clicked column '+ ($(this).index()+1));
-    });*/
-    $(".bingo-table").on("click", function(event) { 
+    });
+    $(".bingo-table").on("click", function(event) {
         console.log(event.target.id);
         $("#" + event.target.id).css("opacity", "0.4");
     });
         console.log('You clicked column '+ ($(this).index("flex-row")+1));
-});
->>>>>>> 23af8ad89c5e59e0a9c1f2f6f3a791b39da6b875
-});
