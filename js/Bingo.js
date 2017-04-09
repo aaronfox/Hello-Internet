@@ -64,14 +64,44 @@ function checkWinner(eventId, size) {
                 boolArray.push("1");
             }
         }
-
-    for (var i = 0; i < size * size; i++) {
-        var acrossCheck = true;
-        if (i != 0 && (i + 1) % size == 0) {
-
-            }
+    // convert array to look like the bingo board for easy win checking
+    var arrOfArrs = [];
+    var count = 0;
+    for (var i = 0; i < size; i++) {
+        var arr = [];
+        for (var j = 0; j < size; j++) {
+            arr.push(boolArray[count]);
+            count++;
+        }
+        arrOfArrs.push(arr);
     }
-    return boolArray;
+
+    for (var i = 0; i < size; i++) {
+        // check for horizontal bingo
+        var acrossCheck = true;
+        for (var j = 0; j < size; j++) {
+            if (arrOfArrs[i][j] != 1) {
+                acrossCheck = false;
+                console.log(acrossCheck);
+            }
+        }
+        if (acrossCheck) {
+            return true;
+        }
+    }
+
+    for (var i = 0; i < size; i++) {
+        var downCheck = true;
+        for (var j = 0; j < size; j++) {
+            if (arrOfArrs[j][i] != 1) {
+                downCheck = false;
+            }
+        }
+        if (downCheck) {
+            return true;
+        }
+    }
+    return false;
 }
 $(document).ready(function(){
   var ARRAY_SIZE = 5;
@@ -79,6 +109,9 @@ $(document).ready(function(){
     var opacity = $("#" + event.target.id).css("opacity");
     if (opacity == 1) {
       $("#" + event.target.id).css("opacity", "0.4");
+        if(checkWinner(event.target.id, ARRAY_SIZE)) {
+            alert("WINNER!");
+        }
     }
     else{
       $("#" + event.target.id).css("opacity", "1");
