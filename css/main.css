@@ -28,14 +28,20 @@ HEADING
   display: flex;
 }
 .flex-column{
-  padding: 5px;
   border:1px solid #474747;
   background: white;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    align-content: center;
+    
 }
 .flex-row{
   display: flex;
   background: red;
-  border: 5px solid red;
+  border: 1px solid grey;
+    align-items: center;
+    
 }
 .home{
   font-size: 1em;

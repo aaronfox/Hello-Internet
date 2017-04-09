@@ -46,10 +46,19 @@ function generateTable(size) {
 
 $(document).ready(function(){
     generateTable(5);
-    //$(".bingo-table").find(".flex-row").on("click", function() {
-    //    alert("You clicked row " + ($(this).index()+1));
-    //});
-    $(".bingo-table").on("click", function() {
-       alert($(this).index); 
-    });
+    /*var row = 0;
+    var column = 0;
+    $(".bingo-table").find(".flex-row").on("click", function() {
+        row = ($(this).index()+1);
+    });*/
+    /*$(".bingo-table").on("click", function (e) {
+       myRowIndex = $(this).parent().index();
+        myColIndex = $(this).index();
+        alert("Row: " + (myRowIndex + 1) + "\nColumn: " + (myColIndex + 1));
+        e.stopPropagation();
+    });*/
+    $('.bingo-table').find('.flex-row').click( function(){
+  console.log('You clicked row '+ ($(this).index()+1) );
+        console.log('You clicked column '+ ($(this).parent().index()+1));
+});
 });
