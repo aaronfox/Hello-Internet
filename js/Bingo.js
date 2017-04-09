@@ -57,8 +57,12 @@ $(document).ready(function(){
         alert("Row: " + (myRowIndex + 1) + "\nColumn: " + (myColIndex + 1));
         e.stopPropagation();
     });*/
-    $('.bingo-table').find('.flex-row').click( function(){
+    /*$('.bingo-table').find('.flex-row').click(function(){
   console.log('You clicked row '+ ($(this).index()+1) );
-        console.log('You clicked column '+ ($(this).parent().index()+1));
-});
+        console.log('You clicked column '+ ($(this).index()+1));
+    });*/
+    $(".bingo-table").on("click", function(event) { 
+        console.log(event.target.id);
+        $("#" + event.target.id).css("opacity", "0.4");
+    });
 });
