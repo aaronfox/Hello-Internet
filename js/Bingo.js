@@ -17,7 +17,7 @@ function generateTable(size) {
     for (var i = 0; i < size; i++) {
         $(".bingo-table").append("<tr>row-" + i)
         for (var j = 0; j < size; j++) {
-            $(".bingo-table").append("<td>" + bingoArray[index] + "</td>");
+            $(".bingo-table").append("<td id=\"" + index + "\">" + bingoArray[index] + "</td>");
             index++;
         }
         $(".bingo-table").append("</tr>")
