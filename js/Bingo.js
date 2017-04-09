@@ -1,16 +1,4 @@
-var bingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone before a point",
-"Squarespace", "Periodic Videos, Numberphile, or Objectivity", "Grey rant", "The vinyl episode is mentioned",
-"Something relate to Everest", "Fit-o-tron 5000", "\"The Tims\"", "Elon Musk", "Grey gets patriotic about the USA",
-"\"The Reddit\"", "Brady doesn't want a solution to his problem", "Wikipedia vandalization endorsement", "\"The spiritual home of Numberphile\"",
-"Flags", "Grey missed an important thing on Twitter", "Brady story", "Audrey and Lulu", "Harry's Razors",
-"\"Hard as nails\"", "Grey says the word \"underlying\"", "Grey complains about Plane Crash Corner", "Toothbrush developments",
-"Corporate Compensation Corner", "\"Unofficial Official [something]\"", "Listener question corner", "Grey goes out of his way to avoid human interaction",
-"Disappointment with Apple", "Grey picks apart Brady's analogies", "Sportsball corner", "Abrupt ending to the podcast",
-"\"Infuriating\"", "\"Pleasing\"", "\"Experience\"", "\"Vastly\"", "Grey feigning interest and Brady pretending it's genuine",
-"Grey says \"non-zero\"", "Mispronunciation of [Derp] from [Verkastablium]", "Has Grey made a video", "\"Due to, in no small part...\"",
-"Humblebrag", "Brady says \"there's something magical\"", "Grey says \"why Brady?\""];
-
-//var bingoTable = document.getElementsByClassName("bingo-table");
+var bingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone before a point", "Squarespace", "Periodic Videos, Numberphile, or Objectivity", "Grey rant", "The vinyl episode is mentioned", "Something relate to Everest", "Fit-o-tron 5000", "\"The Tims\"", "Elon Musk", "Grey gets patriotic about the USA", "\"The Reddit\"", "Brady doesn't want a solution to his problem", "Wikipedia vandalization endorsement", "\"The spiritual home of Numberphile\"", "Flags", "Grey missed an important thing on Twitter", "Brady story", "Audrey and Lulu", "Harry's Razors", "\"Hard as nails\"", "Grey says the word \"underlying\"", "Grey complains about Plane Crash Corner", "Toothbrush developments", "Corporate Compensation Corner", "\"Unofficial Official [something]\"", "Listener question corner", "Grey goes out of his way to avoid human interaction", "Disappointment with Apple", "Grey picks apart Brady's analogies", "Sportsball corner", "Abrupt ending to the podcast", "\"Infuriating\"", "\"Pleasing\"", "\"Experience\"", "\"Vastly\"", "Grey feigning interest and Brady pretending it's genuine", "Grey says \"non-zero\"", "Mispronunciation of [Derp] from [Verkastablium]", "Has Grey made a video", "\"Due to, in no small part...\"", "Humblebrag", "Brady says \"there's something magical\"", "Grey says \"why Brady?\""];
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -43,20 +31,33 @@ function generateTable(size) {
         $(".bingo-table").append("</div>");
     }
 }
-
-
+function removeTable(){
+  $(".flex-row").remove();
+}
+function checkWinner(eventId, size) {
+    var boolArray = [];
+    for (i = 0; i < size * size; i++)
+        {
+        }
+    return "MOO";
+}
 $(document).ready(function(){
-    generateTable(5);
-        console.log('You clicked column '+ ($(this).index()+1));
-    });
-    $(".bingo-table").on("click", function(event) {
-
-        var opacity = $("#" + event.target.id).css("opacity");
-        if (opacity == 1) {
-            $("#" + event.target.id).css("opacity", "0.4");
-        }
-        else{
-            $("#" + event.target.id).css("opacity", "1");
-        }
-    });
-        console.log('You clicked column '+ ($(this).index("flex-row")+1));
+  var ARRAY_SIZE = 5;
+  console.log('You clicked column '+ ($(this).index()+1));
+  $(".bingo-table").on("click", function(event) {
+    var opacity = $("#" + event.target.id).css("opacity");
+    if (opacity == 1) {
+      $("#" + event.target.id).css("opacity", "0.4");
+    }
+    else{
+      $("#" + event.target.id).css("opacity", "1");
+    }
+    console.log(checkWinner(event.target.id, ARRAY_SIZE));
+  });
+  $(".button").click(function () {
+    console.log( "Handler for .click() called." );
+    ARRAY_SIZE = event.target.id;
+    removeTable();
+    generateTable(ARRAY_SIZE);
+  })
+});
