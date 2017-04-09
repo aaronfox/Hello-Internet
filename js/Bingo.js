@@ -12,9 +12,19 @@ var BingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone bef
 
 var bingoTable = document.getElementsByClassName("bingo-table");
 
+var generateTable = function(size) {
+    for (var i = 0; i < size; i++) {
+        for (var j = 0; j < size; j++) {
+            
+        }
+    }
+}
+
 console.log("MOOOOOOO");
 
 $(document).ready(function(){
-    $(".test").html("<h1>TEST</h1>");
-    console.log("INSIDE");
+    $(".bingo-table").append("<tr>ROW ONE");
+    $(".bingo-table").append("<td>cell one</td>");
+    $(".bingo-table").append("<td>cell two</td>");
+    $(".bingo-table").append("<td>cell three</td></tr>");
 });
