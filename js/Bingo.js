@@ -59,6 +59,6 @@ $(document).ready(function(){
     });*/
     $('.bingo-table').find('.flex-row').click( function(){
   console.log('You clicked row '+ ($(this).index()+1) );
-        console.log('You clicked column '+ ($(this).parent().index()+1));
+        console.log('You clicked column '+ ($(this).index("flex-row")+1));
 });
 });
