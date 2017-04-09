@@ -1,4 +1,4 @@
-var BingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone before a point",
+var bingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone before a point",
 "Squarespace", "Periodic Videos, Numberphile, or Objectivity", "Grey rant", "The vinyl episode is mentioned",
 "Something relate to Everest", "Fit-o-tron 5000", "\"The Tims\"", "Elon Musk", "Grey gets patriotic about the USA",
 "\"The Reddit\"", "Brady doesn't want a solution to his problem", "Wikipedia vandalization endorsement", "\"The spiritual home of Numberphile\"",
@@ -10,21 +10,26 @@ var BingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone bef
 "Grey says \"non-zero\"", "Mispronunciation of [Derp] from [Verkastablium]", "Has Grey made a video", "\"Due to, in no small part...\"",
 "Humblebrag", "Brady says \"there's something magical\"", "Grey says \"why Brady?\""];
 
-var bingoTable = document.getElementsByClassName("bingo-table");
+//var bingoTable = document.getElementsByClassName("bingo-table");
 
-var generateTable = function(size) {
+function generateTable(size) {
+    var index = 0;
     for (var i = 0; i < size; i++) {
+        $(".bingo-table").append("<tr>row-" + i)
         for (var j = 0; j < size; j++) {
-            
+            $(".bingo-table").append("<td>" + bingoArray[index] + "</td>");
+            index++;
         }
+        $(".bingo-table").append("</tr>")
     }
 }
 
 console.log("MOOOOOOO");
 
 $(document).ready(function(){
-    $(".bingo-table").append("<tr>ROW ONE");
+    /*$(".bingo-table").append("<tr>ROW ONE");
     $(".bingo-table").append("<td>cell one</td>");
     $(".bingo-table").append("<td>cell two</td>");
-    $(".bingo-table").append("<td>cell three</td></tr>");
+    $(".bingo-table").append("<td>cell three</td></tr>");*/
+    generateTable(3);
 });
