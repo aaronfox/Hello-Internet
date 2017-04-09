@@ -44,12 +44,13 @@ function generateTable(size) {
     }
 }
 
+
 $(document).ready(function(){
     generateTable(5);
         console.log('You clicked column '+ ($(this).index()+1));
     });
     $(".bingo-table").on("click", function(event) {
-        
+
         var opacity = $("#" + event.target.id).css("opacity");
         if (opacity == 1) {
             $("#" + event.target.id).css("opacity", "0.4");

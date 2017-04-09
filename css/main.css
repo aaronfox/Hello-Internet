@@ -46,12 +46,11 @@ HEADING
   display: flex;
 }
 .home{
-  font-size: 1em;
+  font-size: 3em;
 }
 /****************
-NAV
+MAIN NAV
 ****************/
-
 .mainNav a {
 	text-align: center;
 	display: block;
@@ -59,6 +58,8 @@ NAV
 }
 .mainNav li{
   list-style: none;
+  font-size: 2em;
+  font-weight: bold;
 }
 ul {
   display: flex;
@@ -68,4 +69,13 @@ ul {
 a{
   text-decoration: none;
   color: #fff;
+}
+
+/****************
+DIFFCULTY NAV
+****************/
+.difNav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
