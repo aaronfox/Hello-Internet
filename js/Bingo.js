@@ -32,6 +32,10 @@ function generateTable(size) {
     }
 }
 
+function removeTable(){
+  $(".flex-row").remove();
+}
+
 function checkWinner(eventId, size) {
     var boolArray = [];
     
@@ -54,21 +58,23 @@ function checkWinner(eventId, size) {
     }
     return boolArray;
 }
-
 $(document).ready(function(){
     
     var ARRAY_SIZE = 5;
+  var ARRAY_SIZE = 5;
+  $(".bingo-table").on("click", function(event) {
+    var opacity = $("#" + event.target.id).css("opacity");
+    if (opacity == 1) {
+      $("#" + event.target.id).css("opacity", "0.4");
+    }
+    else{
+      $("#" + event.target.id).css("opacity", "1");
+    }
+  });
+  $(".button").click(function () {
+    // difficulty level id's are pre-set to be the appropriate array-size number
+    ARRAY_SIZE = event.target.id;
+    removeTable();
     generateTable(ARRAY_SIZE);
-        console.log('You clicked column '+ ($(this).index()+1));
-     $(".bingo-table").on("click", function(event) {
-        var opacity = $("#" + event.target.id).css("opacity");
-        if (opacity == 1) {
-            $("#" + event.target.id).css("opacity", "0.4");
-        }
-        else{
-            $("#" + event.target.id).css("opacity", "1");
-        }
-        console.log(checkWinner(event.target.id, ARRAY_SIZE));
-    });
+  })
 });
-   
