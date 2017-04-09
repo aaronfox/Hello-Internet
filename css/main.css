@@ -29,12 +29,13 @@ HEADING
 }
 .flex-column{
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   border: 2.5px solid #474747;
   background: white;
   width: 200px;
   height: 50px;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 .flex-row{
   display: flex;
