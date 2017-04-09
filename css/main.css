@@ -37,6 +37,9 @@ HEADING
   background: red;
   border: 5px solid red;
 }
+.home{
+  font-size: 1em;
+}
 /****************
 NAV
 ****************/
@@ -44,7 +47,7 @@ NAV
 .mainNav a {
 	text-align: center;
 	display: block;
-	padding: 10px 15px;
+	padding: 0px 10px;
 }
 .mainNav li{
   list-style: none;
