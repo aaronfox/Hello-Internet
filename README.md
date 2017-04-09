@@ -1,7 +1,9 @@
-#*NOTE* The enchanced Hello Internet experience is now accesible at www.hellointernetbingo.com
-# HelloInternet
+*Thanks to the RevolutionUC Hackathon Organizers for such a great, productive time*
+
+*NOTE*: The enhanced Hello Internet experience is now accessible at www.hellointernetbingo.com
+# Hello Internet
 A web app devoted to making CGP Grey and Brady Haran's *Hello Internet* experience a good time 
-##Ideas
+## Ideas
 * Bingo
 * Visualize podcasts data from Itunes API
 * Eventually have interactive Bingo for all Tims
