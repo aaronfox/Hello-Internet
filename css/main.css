@@ -1,0 +1,18 @@
+/************************
+HELLO INTERNET MAIN CSS
+************************/
+/****************
+GENRAL
+****************/
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body{
+  background: #474747;
+}
+/****************
+HEADING
+****************/
