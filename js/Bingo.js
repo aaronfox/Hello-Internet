@@ -46,23 +46,13 @@ function generateTable(size) {
 
 $(document).ready(function(){
     generateTable(5);
-    /*var row = 0;
-    var column = 0;
-    $(".bingo-table").find(".flex-row").on("click", function() {
-        row = ($(this).index()+1);
-    });*/
-    /*$(".bingo-table").on("click", function (e) {
-       myRowIndex = $(this).parent().index();
-        myColIndex = $(this).index();
-        alert("Row: " + (myRowIndex + 1) + "\nColumn: " + (myColIndex + 1));
-        e.stopPropagation();
-    });*/
-    /*$('.bingo-table').find('.flex-row').click(function(){
-  console.log('You clicked row '+ ($(this).index()+1) );
         console.log('You clicked column '+ ($(this).index()+1));
     });*/
     $(".bingo-table").on("click", function(event) { 
         console.log(event.target.id);
         $("#" + event.target.id).css("opacity", "0.4");
     });
+        console.log('You clicked column '+ ($(this).index("flex-row")+1));
+});
+>>>>>>> 23af8ad89c5e59e0a9c1f2f6f3a791b39da6b875
 });
