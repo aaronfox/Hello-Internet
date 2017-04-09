@@ -24,8 +24,6 @@ function generateTable(size) {
     }
 }
 
-console.log("MOOOOOOO");
-
 $(document).ready(function(){
     /*$(".bingo-table").append("<tr>ROW ONE");
     $(".bingo-table").append("<td>cell one</td>");
