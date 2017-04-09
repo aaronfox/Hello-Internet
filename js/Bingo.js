@@ -21,7 +21,7 @@ function shuffle(array) {
 
 function generateTable(size) {
     var shuffledArray = shuffle(bingoArray);
-    
+
     // assign each column a div class so that the columns can be resized properly by their size
     var diffClass = "";
     switch (Number(size)) {
@@ -53,7 +53,7 @@ function removeTable(){
 
 function checkWinner(eventId, size) {
     var boolArray = [];
-    
+
     // convert each block to 0's for unchecked and 1's for checked;
     for (i = 0; i < size * size; i++)
         {
@@ -64,11 +64,11 @@ function checkWinner(eventId, size) {
                 boolArray.push("1");
             }
         }
-    
+
     for (var i = 0; i < size * size; i++) {
         var acrossCheck = true;
         if (i != 0 && (i + 1) % size == 0) {
-            
+
             }
     }
     return boolArray;
@@ -84,7 +84,7 @@ $(document).ready(function(){
       $("#" + event.target.id).css("opacity", "1");
     }
   });
-  $(".button").click(function () {
+  $(".button").click(function (event) {
     // difficulty level id's are pre-set to be the appropriate array-size number
     ARRAY_SIZE = event.target.id;
     removeTable();
