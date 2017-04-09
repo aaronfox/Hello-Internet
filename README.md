@@ -1,4 +1,4 @@
-#*NOTE* The enchanced Hello Internet experience is now accesible at www.hellointernetbingo.com
+*NOTE*: The enhanced Hello Internet experience is now accesible at www.hellointernetbingo.com
 # HelloInternet
 A web app devoted to making CGP Grey and Brady Haran's *Hello Internet* experience a good time 
 ##Ideas
