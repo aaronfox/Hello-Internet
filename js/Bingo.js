@@ -31,19 +31,37 @@ function generateTable(size) {
         $(".bingo-table").append("</div>");
     }
 }
+
 function removeTable(){
   $(".flex-row").remove();
 }
+
 function checkWinner(eventId, size) {
     var boolArray = [];
+    
+    // convert each block to 0's for unchecked and 1's for checked;
     for (i = 0; i < size * size; i++)
         {
+            if ($("#column-" + i).css("opacity") == 1) {
+                boolArray.push("0");
+            }
+            else {
+                boolArray.push("1");
+            }
         }
-    return "MOO";
+    
+    for (var i = 0; i < size * size; i++) {
+        var acrossCheck = true;
+        if (i != 0 && (i + 1) % size == 0) {
+            
+            }
+    }
+    return boolArray;
 }
 $(document).ready(function(){
+    
+    var ARRAY_SIZE = 5;
   var ARRAY_SIZE = 5;
-  console.log('You clicked column '+ ($(this).index()+1));
   $(".bingo-table").on("click", function(event) {
     var opacity = $("#" + event.target.id).css("opacity");
     if (opacity == 1) {
@@ -52,10 +70,9 @@ $(document).ready(function(){
     else{
       $("#" + event.target.id).css("opacity", "1");
     }
-    console.log(checkWinner(event.target.id, ARRAY_SIZE));
   });
   $(".button").click(function () {
-    console.log( "Handler for .click() called." );
+    // difficulty level id's are pre-set to be the appropriate array-size number
     ARRAY_SIZE = event.target.id;
     removeTable();
     generateTable(ARRAY_SIZE);
