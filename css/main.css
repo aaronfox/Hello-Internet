@@ -13,6 +13,27 @@ header{
 body{
   background: #474747;
 }
+html{
+  border: 5px dashed white;
+}
 /****************
 HEADING
 ****************/
+.bingo-table{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.flex-column{
+  padding: 5px;
+  border:1px solid #474747;
+  background: white;
+}
+.flex-row{
+  display: flex;
+  background: red;
+  border: 5px solid red;
+}
