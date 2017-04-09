@@ -35,12 +35,12 @@ function generateTable(size) {
     var shuffledArray = shuffle(bingoArray);
     var index = 0;
     for (var i = 0; i < size; i++) {
-        $(".bingo-table").append("<div class=\"flex-row\">")
+        $(".bingo-table").append("<div class=\"flex-row\">");
         for (var j = 0; j < size; j++) {
             $(".bingo-table").append("<div class=\"flex-column\" id=\"column-" + index + "\">" + shuffledArray[index] + "</div>");
             index++;
         }
-        $(".bingo-table").append("</div>")
+        $(".bingo-table").append("</div>");
     }
 }
 
