@@ -49,7 +49,13 @@ $(document).ready(function(){
         console.log('You clicked column '+ ($(this).index()+1));
     });
     $(".bingo-table").on("click", function(event) {
-        console.log(event.target.id);
-        $("#" + event.target.id).css("opacity", "0.4");
+        
+        var opacity = $("#" + event.target.id).css("opacity");
+        if (opacity == 1) {
+            $("#" + event.target.id).css("opacity", "0.4");
+        }
+        else{
+            $("#" + event.target.id).css("opacity", "1");
+        }
     });
         console.log('You clicked column '+ ($(this).index("flex-row")+1));
