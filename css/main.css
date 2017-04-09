@@ -28,11 +28,13 @@ HEADING
   display: flex;
 }
 .flex-column{
+  display: flex;
   border: 2.5px solid #474747;
   background: white;
   width: 200px;
   height: 50px;
   align-items: center;
+  justify-content: center;
 }
 .flex-row{
   display: flex;
