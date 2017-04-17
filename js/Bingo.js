@@ -76,8 +76,8 @@ function checkWinner(eventId, size) {
         arrOfArrs.push(arr);
     }
 
+    // check for horizontal bingo
     for (var i = 0; i < size; i++) {
-        // check for horizontal bingo
         var acrossCheck = true;
         for (var j = 0; j < size; j++) {
             if (arrOfArrs[i][j] != 1) {
@@ -90,6 +90,7 @@ function checkWinner(eventId, size) {
         }
     }
 
+    // check for vertical bingo
     for (var i = 0; i < size; i++) {
         var downCheck = true;
         for (var j = 0; j < size; j++) {
@@ -101,8 +102,34 @@ function checkWinner(eventId, size) {
             return true;
         }
     }
+    
+    // check for diagonal bingo from top left to bottom right
+    var diagCheckTLtoBR = true;
+    for (var i = 0; i < size; i++) {
+        if (arrOfArrs[i][i] != 1) {
+            diagCheckTLtoBR = false;
+        }
+        if (diagCheckTLtoBR && i == size - 1) {
+            return true;
+        }
+    }
+
+    // check for diagonal bingo from top right to bottom left
+    var diagCheckTRtoBL = true;
+    var sizeDecrementer = size - 1;
+    for (var i = 0; i < size; i++) {
+        if (arrOfArrs[i][sizeDecrementer] != 1) {
+            diagCheckTRtoBL = false;
+        }
+        sizeDecrementer--;
+        if (i == size - 1 && diagCheckTRtoBL) {
+            return true;
+        }
+    }
+    
     return false;
 }
+    
 $(document).ready(function(){
   var ARRAY_SIZE = 5;
   $(".bingo-table").on("click", function(event) {
