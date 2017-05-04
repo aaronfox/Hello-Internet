@@ -1,5 +1,7 @@
 var bingoArray = ["Adelaide", "Freebooting", "Grey sighs into the microphone before making a point", "Squarespace", "Periodic Videos, Numberphile, or Objectivity", "Impassioned Grey rant", "The vinyl episode is mentioned", "Something related to Everest", "Fit-o-tron 5000", "\"The Tims\"", "Elon Musk", "Grey gets patriotic about the USA", "\"The Reddit\"", "Brady doesn't want a solution to his problem", "Wikipedia vandalization endorsement", "\"The spiritual home of Numberphile\"", "Flags", "Grey missed an important thing on Twitter", "Brady story", "Audrey and Lulu", "Harry's Razors", "\"Hard as nails\"", "Grey says the word \"underlying\"", "Grey complains about Plane Crash Corner", "Toothbrush developments", "Corporate Compensation Corner", "\"Unofficial Official [something]\"", "Listener question corner", "Grey goes out of his way to avoid human interaction", "Disappointment with Apple", "Grey picks apart Brady's analogies", "Sportsball corner", "Abrupt ending to the podcast", "\"Infuriating\"", "\"Pleasing\"", "\"Experience\"", "\"Vastly\"", "Grey feigning interest and Brady pretending it's genuine", "Grey says \"non-zero\"", "Mispronunciation of [Derp] from [Verkastablium]", "Has Grey made a video", "\"Due to, in no small part...\"", "Humblebrag", "Brady says \"there's something magical\"", "Grey says \"why Brady?\"", "\"Mrs. Brady\" or \"Mrs. Grey\"", "Brady comes up with an absurd idea", "Free will","YouTube problems"];
 
+// gets starting time
+var startTime = new Date();
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
   var randomIndex = 0;
@@ -30,7 +32,6 @@ function generateTable(size) {
             break;
         case 5:
             diffClass = "medium";
-            console.log("changed diffClass to medium");
             break;
         case 7:
             diffClass = "hard";
@@ -82,7 +83,6 @@ function checkWinner(eventId, size) {
         for (var j = 0; j < size; j++) {
             if (arrOfArrs[i][j] != 1) {
                 acrossCheck = false;
-                console.log(acrossCheck);
             }
         }
         if (acrossCheck) {
@@ -131,13 +131,16 @@ function checkWinner(eventId, size) {
 }
     
 $(document).ready(function(){
+    
   var ARRAY_SIZE = 5;
   $(".bingo-table").on("click", function(event) {
     var opacity = $("#" + event.target.id).css("opacity");
     if (opacity == 1) {
       $("#" + event.target.id).css("opacity", "0.4");
         if(checkWinner(event.target.id, ARRAY_SIZE)) {
-            alert("WINNER!");
+            var endTime = new Date();
+            var totalTime = endTime.getSeconds() - startTime.getSeconds();
+            alert("It took you " + totalTime + " seconds to get a bingo.");
         }
     }
     else{
