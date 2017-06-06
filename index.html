@@ -3,8 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>HI | Home</title>
+    <script type="text/javascript" src="assets/phaser.min.js"></script>
+    <script src="src/boot.js"></script>
+    <script src="src/preload.js"></script>
+    <script src="src/gametitle.js"></script>
+    <script src="src/thegame.js"></script>
+    <script src="src/gameover.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>body{margin:0}</style>
+    <script>
+			(function() {
+				var game = new Phaser.Game(400, 490, Phaser.AUTO, "game");
+				game.state.add("Boot", boot);
+				game.state.add("Preload", preload);
+				game.state.add("GameTitle", gameTitle);
+				game.state.add("TheGame", theGame);
+				game.state.add("GameOver", gameOver);
+                
+				game.state.start("Boot");
+			})();    
+    </script>
   </head>
   <body>
     <header class="mainHeader">
