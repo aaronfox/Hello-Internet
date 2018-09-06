@@ -1,6 +1,6 @@
 *Thanks to the RevolutionUC Hackathon Organizers for such a great, productive time*
 
-*NOTE*: The enhanced Hello Internet experience is now accessible at www.hellointernetbingo.com
+*NOTE*: The enhanced Hello Internet experience is now accessible at www.hellointernetbingo.com (well, it *was*, my partner in this project and I have no longer decided to fund the hosting of this site)
 # Hello Internet
 A web app devoted to making CGP Grey and Brady Haran's *Hello Internet* experience a good time 
 ## TODO
