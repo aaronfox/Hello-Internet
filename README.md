@@ -1,6 +1,9 @@
 *Thanks to the RevolutionUC Hackathon Organizers for such a great, productive time*
 
+*Update* A living fossil of this site, CGP Grey Flappy Bird, can be found at http://www.aaronfox.me/flappy
+
 *NOTE*: The enhanced Hello Internet experience is now accessible at www.hellointernetbingo.com (well, it *was*. My partner in this project and I have no longer decided to fund the hosting of this site)
+
 # Hello Internet
 A web app devoted to making CGP Grey and Brady Haran's *Hello Internet* experience a good time 
 ## TODO
